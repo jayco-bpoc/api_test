@@ -1,0 +1,5 @@
+<IfModule mod_rewrite.c>
+    RewriteCond %{HTTP_HOST} ^pw-api-test.slvp.net$ [NC,OR]
+    RewriteCond %{REQUEST_URI} !public/
+    RewriteRule (.*) /public/$1 [L]
+</IfModule>
